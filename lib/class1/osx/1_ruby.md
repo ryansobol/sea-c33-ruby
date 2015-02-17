@@ -1,66 +1,66 @@
 ### Install Ruby
 
-Using Homebrew, you can now install the latest, stable version of [Ruby](https://www.ruby-lang.org/).
-
-To get started, run the following command:
+Using Homebrew, install the latest, stable version of [Ruby](https://www.ruby-lang.org/). To get started, run the following command.
 
 ```
 brew install ruby
 ```
 
-Once it finishes, run the following command:
+Once it finishes, verify Ruby was installed correctly by running the following command.
 
 ```
 ruby -v
 ```
 
-And you'll see something like this:
+And you'll see something like this.
 
-```
-ruby 2.1.3p242 (2014-09-19 revision 47630) [x86_64-darwin13.0]
-```
+![](https://i.imgur.com/qi20rW3.png)
+
 
 ### Interactive Ruby Shell
 
 The Interactive Ruby Shell, or **IRB**, provides a REPL (read-evaluate-print loop) for Ruby programs.
 
-To get started, run this command to download and install a small config file that makes IRB more beginner friendly:
+To get started, run this command to download and install a small config file that makes IRB more beginner friendly.
 
 ```
 curl -fsSL http://git.io/G6oJ4g > ~/.irbrc
 ```
 
-Then, launch IRB by running the following command:
+Then, launch IRB by running the following command.
 
 ```
 irb
 ```
 
-You'll immediately see the IRB prompt:
+And you'll see the IRB prompt.
+
+![](http://i.imgur.com/Ckn6ssE.png)
+
+Now that IRB is running, type and run the following Ruby program.
 
 ```
->>
+42 + 9000
 ```
 
-Where you can type and run any Ruby program:
+And watch IRB return the following result.
+
+![](https://i.imgur.com/bMEtYp1.png)
+
+Next, type and run a more sophisticated Ruby program.
 
 ```
->> 42 + 9000
-=> 9042
+def add(a, b)
+  a + b
+end
+add(42, 9000)
 ```
 
-Even a more sophisticated Ruby program:
+Notice how IRB **evaluates the method definition** and then **invokes the method**.
 
-```
->> def add(a, b)
->>   a + b
->> end
-=> :add
->> add(42, 9000)
-=> 9042
-```
+![](https://i.imgur.com/QAQcpjZ.png)
 
-IRB is a great tool for learning and experimenting with Ruby.
+As you can see, IRB is a great tool for learning and experimenting with Ruby.
 
 **TIP:** To quit, type `exit` and press the Enter key.
 
@@ -69,9 +69,9 @@ IRB is a great tool for learning and experimenting with Ruby.
 
 Given a Ruby program, the **Ruby Interpreter** reads it, evaluates it, and then quits.
 
-Unlike IRB, the Ruby Interpreter won't necessarily print anything and it certainly won't loop waiting for you to give it another program to run. Despite these deficiencies, you'll use the Ruby Interpreter to run nearly all the Ruby programs you create.
+Unlike IRB, the Ruby Interpreter won't automatically print the result and it certainly won't loop waiting for you to give it another program to run. Despite all this, you'll use the Ruby Interpreter to run nearly all the Ruby programs you create.
 
-Let's try it out. First, open a new Ruby program file in Sublime Text:
+Let's try it out. First, open a new Ruby program file in Sublime Text.
 
 ```
 subl ~/Desktop/test.rb
@@ -79,21 +79,25 @@ subl ~/Desktop/test.rb
 
 **TIP:** Ruby program files end with a `.rb` extension.
 
-Then type the following program into the file:
+Then type the following program into the file.
 
 ```
 42 + 9000
 ```
 
-Save the file and run the program using the Ruby Interpreter:
+Save the file and run the program using the Ruby Interpreter.
 
 ```
 ruby ~/Desktop/test.rb
 ```
 
+And you'll see something like this.
+
+![](https://i.imgur.com/SVn8Wko.png)
+
 Weird, nothing happened. Remember, the Ruby Interpreter won't print anything unless told. Jerk! :triumph:
 
-Change the program so it reads like this:
+Change the program so it reads like this.
 
 ```
 puts 42 + 9000
@@ -105,19 +109,17 @@ Save the file and re-run the program:
 ruby ~/Desktop/test.rb
 ```
 
-And you'll see:
+And you'll see something like this.
 
-```
-9042
-```
+![](https://i.imgur.com/7ejO4L1.png)
 
 Bravo! :tada:
 
-Play around with Ruby on your own. When you're done, remove the `test.rb` file by running the following command:
+Play around with Ruby on your own. When you're done, remove the `test.rb` file by running the following command.
 
 ```
 rm ~/Desktop/test.rb
 ```
 
 
-### [⇐ Previous](4_sublime_text.md) | [Next ⇒](6_git.md)
+### [Next ⇒](2_project.md)

@@ -70,7 +70,7 @@ bundle install --path vendor/bundle
 ```
 
 
-### Add an upstream
+### Add an upstream remote
 
 And third, you'll want to add an `upstream` remote to you locally cloned project:
 
